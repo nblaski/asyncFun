@@ -1,4 +1,5 @@
 const dogUrl = 'https://raw.githubusercontent.com/DukeNgn/Dog-facts-API/master/data.json';
+// const breedUrl = 'css/json/dognames.json';
 const breedUrl = 'https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/dogs.json';
 const wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 const dogList = document.getElementById('dogList');
@@ -72,21 +73,6 @@ function generateHTML(data1, data2) {
             <div class="factFooter">Reload page to switch them up! </div>
           </div>
         `;
-      } else if (factDog.type === "disambiguation" && factDog.thumbnail !== undefined )
-          section.innerHTML = `
-            <div id="tag">
-              <img id="${factDog.title}" src=${factDog.thumbnail.source} alt="${factDog.title}">
-              <h1>${factDog.title}</h1>
-              <h2>${factDog.description}</h2>
-              <p>${factDog.extract}</p>
-              <a href="#top"  class="tagFooter">TOP OF PAGE</a>
-            </div>
-            <div class="factBox">
-              <div class="factTitle">Random Fun Fact: </div>
-              <div class="fact">${data1[Math.floor(Math.random() * data1.length)].fact}</div>
-              <div class="factFooter">Reload page to switch them up! </div>
-            </div>
-          `;
       } else {
         section.innerHTML = `
         <div id="tag">
