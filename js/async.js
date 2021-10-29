@@ -1,6 +1,6 @@
 const dogUrl = 'https://raw.githubusercontent.com/DukeNgn/Dog-facts-API/master/data.json';
 // const breedUrl = 'css/json/dognames.json';
-const breedUrl = 'https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/dogs.json';
+const breedUrl = 'https://raw.githubusercontent.com/nblaski/asyncFun/master/json/dognames.json';
 const wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 const dogList = document.getElementById('dogList');
 const breedSection = document.getElementById('breedSection');
