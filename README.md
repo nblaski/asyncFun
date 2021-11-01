@@ -1,7 +1,3 @@
-# asyncFun
-
-![asyncFun](img/dogPlaceholder.jpg)
-
 # async function ( 😎 ) { 😎 } ; expressions and the fetch ( 😎 ) method.
 
 Focus of this project was to learn asynchronous, promise based programming using async function expressions and the fetch() method.
@@ -22,7 +18,9 @@ The goal was to create a dog library and populate it with data from wikipedia an
 
 ## Resources
 
-wikipedia API
-Full Stack JavaScript Track at www.teamtreehouse.com
+* wikipedia API
+* Full Stack JavaScript Track at www.teamtreehouse.com
+
+![asyncFun](img/dogPlaceholder.jpg)
 
 
