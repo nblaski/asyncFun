@@ -1,8 +1,8 @@
 # async function ( 😎 ) { 😎 } ; expressions and the fetch ( 😎 ) method.
 
 Focus of this project was to learn asynchronous, promise based programming using async function expressions and the fetch() method.
-The program is currently linked to js/fetch.js where the fetch() method is used. 
-js/async.js is written with async functions with the same outcome as js/fetch.js
+* The program is currently linked to js/fetch.js where the fetch() method is used. 
+* js/async.js is written with async functions but has the same outcome as js/fetch.js. Please check out both ways you can code this project
 The goal was to create a dog library and populate it with data from wikipedia and json data
 
 ## Key components
