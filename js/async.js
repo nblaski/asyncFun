@@ -16,6 +16,7 @@ const placehere = document.getElementById("placehere");
 async function getJSON(url) {
   try {
     const response = await fetch(url);
+  //  console.log(response);
     return await response.json();
   } catch (error) {
     throw error;
@@ -36,18 +37,29 @@ async function getDogFacts(url) {
    return Promise.all(arrayMap);
  }
 
-// Get Dog list from URL.json and Wiki API info
+// Get response/wikiUrl + dog names /  from getJSON(breedUrl) / and Wiki API info
   async function getDogBreeds(url) {
+    //gets response object from getJSON(breedUrl) - returns breedUrl as object
   const breedJSON = await getJSON(url);
+  //returns object with key dogs - an array of dog names
+  //console.log(breedJSON);
   const profiles = breedJSON.dogs.map( async (dog) => {
+     // maps and prints out dogs
+     //console.log(dog)
      const profileJSON = await getJSON(wikiUrl + dog);
+     // maps over every dog name combines it with wikiUrl and returns all wiki info profiles in all separate objects
+     //console.log(profileJSON);
      return profileJSON;
   });
+  //returns a bunch of promises in an array each promise holding wiki profile value
+  console.log(profiles)
   return Promise.all(profiles);
 }
 
 // Generate the markup for each profile
 function generateHTML(data1, data2) {
+  //console.log(data1);
+  //console.log(data2);
   data1.map( factDog => {
     const listItem = document.createElement('li');
       listItem.innerHTML = `
@@ -122,6 +134,8 @@ btn.addEventListener('click', async (event) => {
   try {
     const dogs = await getDogFacts(dogUrl);
     const dogbreed = await getDogBreeds(breedUrl);
+    // returns an array of wiki info objects which is what i need!!!
+    //console.log(dogbreed);
     generateHTML(dogs, dogbreed);
     drop(dogbreed);
   } catch(e) {
